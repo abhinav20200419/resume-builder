@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>Resume Builder</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="tw-bg-gray-200">
+    <p class="template_id" id="template_id" hidden>fd</p>
+    <div class="tw-container-fluid h-100">
+      <div class="row h-100">
+        <style>
+          /* Style for the left part */
+          .left-part {
+            flex: 1;
+            /* Take up remaining space */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            border-right: 1px solid #ccc;
+            /* Optional: Add a border between parts */
+            scrollbar-width: thin;
+            /* Firefox */
+            scrollbar-color: transparent transparent;
+            /* Firefox */
+          }
+
+          /* Style for the right part */
+          .right-part {
+            flex: 1;
+            /* Take up remaining space */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            scrollbar-width: thin;
+            /* Firefox */
+            scrollbar-color: transparent transparent;
+            /* Firefox */
+          }
+        </style>
+
+        <!-- Left Section -->
+        <div class="col-lg-6 col-sm-0 sm:display-none">
+          <div class="tw-my-4 tw-ml-4 tw-py-2 tw-pl-2 tw-rounded-lg">
+            <div class="row">
+              <!--   <div id="left_na ">  --><!-- id="left_nav" -->
+                  <div
+                  class="col-md-4 tw-bg-blue-400 tw-ml-4 leftsidebar tw-rounded-lg tw-mr-12 tw-h-1/3 tw-sticky tw-top-10"
+                  style="width: 160px"
+                  ;
+                >
+                  <div class="tw-bg-blue-300">
+                    <div class="tw-bg-blue-200">
+                      <ul class="tw-unordered-list align-content-center">
+                        <li class="tw-p-4 text-dark tw-text-xl fw-bold">
+                          <img
+                            src="logo.png"
+                            class="tw-max-h-20 tw-max-w-20"
+                            alt="logo" onclick="window.open('home.html', '_self');"
+                          />
+                        </li><li class="tw-p-4  tw-text-xl fw-bold">
+                          <a href="resume.html" class="tw-text-black">
+                            <i
+                            class="fa-solid fa-file-lines fa-2x tw-mb-1 tw-mx-4"
+                            ></i>
+                            <br />Content
+                          </a>
+                          
+                        </li>
+                        <li class="tw-p-4 text-dark tw-text-xl fw-bold">
+                          <a href="resume_customize.html" class="tw-text-black">
+                            <i
+                            class="fa-solid fa-square-pen fa-2x tw-mb-1 tw-mx-4"
+                            ></i>
+                            <br />Customize
+                          </a>
+                          
+                        </li>
+                        <li class="tw-p-4 text-dark tw-text-xl fw-bold">
+                          <i class="fa-solid fa-link fa-2x tw-mb-1 tw-mx-3"></i>
+                          <br /><span class="">Links</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- </div> -->
+              <!-- <div
+                class="col-md-4 tw-bg-blue-400 tw-ml-4 leftsidebar tw-rounded-lg tw-mr-12 tw-h-1/3 tw-sticky tw-top-10"
+                style="width: 160px"
+                ;
+              >
+                <div class="tw-bg-blue-300">
+                  <div class="tw-bg-blue-200">
+                    <ul class="tw-unordered-list align-content-center">
+                      <li class="tw-p-4 text-dark tw-text-xl fw-bold">
+                        <img
+                          src="logo.png"
+                          class="tw-max-h-20 tw-max-w-20"
+                          alt="logo" onclick="window.open('home.html', '_self');"
+                        />
+                      </li>
+                      <li class="tw-p-4 text-dark tw-text-xl fw-bold">
+                        <i
+                          class="fa-solid fa-file-lines fa-2x tw-mb-1 tw-mx-4"
+                        ></i>
+                        <br />Content
+                      </li>
+                      <li class="tw-p-4 text-dark tw-text-xl fw-bold">
+                        <i
+                          class="fa-solid fa-square-pen fa-2x tw-mb-1 tw-mx-4"
+                        ></i>
+                        <br />Customize
+                      </li>
+                      <li class="tw-p-4 text-dark tw-text-xl fw-bold">
+                        <i class="fa-solid fa-link fa-2x tw-mb-1 tw-mx-3"></i>
+                        <br /><span class="">Links</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="col-md-12 col-lg-6 col-xl-7 tw-bg-gray-200">
+                <div
+                  class="fluid tw-h-20 tw-bg-gray-200 tw-max-w-60 tw-fixed tw-top-0"
+                >
+                  <!-- xl:tw-h-20 xl:tw-w-100 lg:tw-h-20 lg:tw-w-80 sm:tw-h-16 sm:tw-w-full   -->
+                  <div
+                    class="tw-mt-10 bg-light tw-p-2 tw-mr-4 tw-py-4 tw-rounded-lg sm:tw-w-full top-resume"
+                  >
+                    <span
+                      class="fw-bold lg:tw-text-2xl tw-ml-3 tw-mt-6 tw-max-w-20 sm:tw-full sm:tw-text-5xl sm:tw-mb-20"
+                      style="padding-top: 50px"
+                      >Resume No. 1
+                    </span>
+                    <button class="btn btn-dark tw-px-2 sm:tw-pl-4" id="download_pdf">
+                      <span class="sm:tw-text-4xl lg:tw-text-xl">
+                        Download
+                      </span>
+                    </button>
+                  </div>
+                </div>
+
+
+
+                <div
+                  class="tw-mt-40 sm:tw-mt-40 lg:tw-mt-28 tw-bg-pink-500 sm:tw-bg-purple-300 md:tw-bg-blue-300 lg:tw-bg-yellow-300 xl:tw-bg-zinc-300 tw-overflow-y-auto tw-rounded-lg hideScroll"
+                  style="height: 500px"
+                >
+                  <div class="container tw-p-2 tw-max-h-24">
+                    <!-- ACCORDION START -->
+                    <style>
+                      .hideScroll::-webkit-scrollbar {
+                        display: none;
+                      }
+                    </style>
+                        
+                        <div class="tw-bg-white tw-p-4 tw-rounded-lg">
+                          <label
+                            for="description"
+                            class="text-dark tw-mt-2 tw-mb-1 fw-bold"
+                            >Description
+                          </label>
+                          <span class="text-gray-400 text-xs tw-ml-1"
+                            >optional</span
+                          >
+                          <br />
+                          <input
+                            type="text"
+                            id="description"
+                            name="profile[]"
+                            oninput="updateSpan(this,'resume_profile')"
+                            class="tw-bg-gray-200 tw-rounded-lg tw-py-2  tw-w-full tw-pl-4"
+                            placeholder="Enter Job Title"
+                          />
+                          <br />
+                        </div>
+
+  
+
+
+
+                        
+
+                        <!-- layout section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="">Layout</h2>
+                          
+                          <div class="tw-bg-gray-200 p-2  tw-flex tw-flex-row">
+                            
+                            <button type="button" class="py-2.5 px-4 py-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 ">Alternative</button> 
+
+                            <div class="flex flex-row tw-justify-center ">
+                              
+                              <div type="button" class=" tw-bg-white  tw-h-12 tw-w-12 tw-rounded-xl tw-mx-2"> 
+                                <div class="tw-bg-blue-300 tw-h-1/2 tw-w-full tw-rounded-t-xl"></div>
+                              </div>
+                              <!-- <span class="tw-w-full tw-mt-2 tw-mb-1 ">Top</span> -->
+                            </div>
+
+                            <div type="button" class=" tw-bg-white  tw-h-12 tw-w-12 tw-rounded-xl tw-mx-2"> 
+                              <div class="tw-bg-blue-300 tw-w-1/2 tw-h-full tw-rounded-l-xl"></div>
+                            </div>
+
+                            <div type="button" class="tw-flex tw-flex-row tw-bg-white  tw-h-12 tw-w-12 tw-rounded-xl tw-justify-end tw-mx-2 "> 
+                              <div class="tw-bg-blue-300 tw-w-1/2 tw-h-full tw-rounded-r-xl"></div>
+                            </div>
+                            
+                          </div>
+
+
+
+                          <h5 class="tw-mt-20">Rearrange Sections</h5>
+                          <div class="bg-light p-2  tw-flex tw-flex-col-reverse tw-justify-start">
+                            <button class="w-auto tw-px-4 tw-py-1 bg-light  tw-justify-content-start tw-my-2" >
+                              
+                              <i class="fa-solid fa-list-ul tw-ml-2 tw-mr-1"></i>
+                              <i class="fa-solid fa-graduation-cap tw-ml-1 tw-mr-5"></i>
+                              <span>Education</span> 
+                            </button>
+                            
+                            <button class="w-full tw-px-4 tw-py-1 bg-light tw-my-2">
+                              <i class="fa-solid fa-list-ul tw-ml-2 tw-mr-1"></i>
+                              <i class="fa-solid fa-graduation-cap tw-ml-1 tw-mr-5"></i>
+                              <span>Courses</span> 
+                            </button>
+                            
+                            <button class="w-full tw-px-4 tw-py-1 bg-light tw-my-2">
+                              <i class="fa-solid fa-list-ul tw-ml-2 tw-mr-1"></i>
+                              <i class="fa-solid fa-graduation-cap tw-ml-1 tw-mr-5"></i>
+                              <span>Page Break</span> 
+                            </button>
+                            
+                            <button class="w-full tw-px-4 tw-py-1 bg-light tw-my-2">
+                              <i class="fa-solid fa-list-ul tw-ml-2 tw-mr-1"></i>
+                              <i class="fa-solid fa-graduation-cap tw-ml-1 tw-mr-5"></i>
+                              <span>Profile</span> 
+                            </button>
+                            
+                            <button class="w-full tw-px-4 tw-py-1 bg-light tw-my-2">
+                              <i class="fa-solid fa-list-ul tw-ml-2 tw-mr-1"></i>
+                              <i class="fa-solid fa-graduation-cap tw-ml-1 tw-mr-5"></i>
+                              <span>Languages</span> 
+                            </button>
+                            
+                            <button class="w-full tw-px-4 tw-py-1 bg-light tw-my-2">
+                              <i class="fa-solid fa-list-ul tw-ml-2 tw-mr-1"></i>
+                              <i class="fa-solid fa-graduation-cap tw-ml-1 tw-mr-5"></i>
+                              <span>Skills</span> 
+                            </button>
+                            
+                            <button class="w-full tw-px-4 tw-py-1 bg-light tw-my-2">
+                              <i class="fa-solid fa-list-ul tw-ml-2 tw-mr-1"></i>
+                              <i class="fa-solid fa-graduation-cap tw-ml-1 tw-mr-5"></i>
+                              <span>Awards</span> 
+                            </button>
+                            
+                            <button class="w-full tw-px-4 tw-py-1 bg-light tw-my-2">
+                              <i class="fa-solid fa-list-ul tw-ml-2 tw-mr-1"></i>
+                              <i class="fa-solid fa-graduation-cap tw-ml-1 tw-mr-5"></i>
+                              <span>Projects</span> 
+                            </button>
+                            
+
+                            <button class="w-full tw-px-4 tw-py-1 bg-light tw-my-2">
+                              <i class="fa-solid fa-list-ul tw-ml-2 tw-mr-1"></i>
+                              <i class="fa-solid fa-graduation-cap tw-ml-1 tw-mr-5"></i>
+                              <span>Publications</span> 
+                            </button>
+                            
+                            <button class="w-full tw-px-4 tw-py-1 bg-light tw-my-2">
+                              <i class="fa-solid fa-list-ul tw-ml-2 tw-mr-1"></i>
+                              <i class="fa-solid fa-graduation-cap tw-ml-1 tw-mr-5"></i>
+                              <span>References</span> 
+                            </button>
+                            
+                            
+                            
+                          </div>
+
+                        </div>
+                        <!-- layout section end -->
+
+                        <!-- colors section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="">Colors</h2>
+                          
+                          <div class="tw-bg-white p-2  tw-flex tw-flex-row">
+                            
+                            
+                            <div type="button" class=" tw-bg-white  tw-h-20 tw-w-20  tw-mx-2 tw-rounded-full tw-border-black tw-border-2"> 
+                            </div>
+
+                            <div type="button" class=" tw-bg-gray-100  tw-h-20 tw-w-20  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                              <div class="tw-bg-blue-300 tw-w-full tw-h-1/2 tw-rounded-t-full"></div>
+                            </div>
+
+                            <div type="button" class="tw-flex tw-flex-row tw-bg-blue-300  tw-h-20 tw-w-20 tw-rounded-full tw-justify-center tw-items-center tw-mx-4 hover:tw-opacity-60"> 
+                              <div class="tw-bg-white tw-w-2/3 tw-h-2/3 tw-rounded-full tw-m-0"></div>
+                            </div>
+                            
+                          </div>
+
+
+                          <div class="tw-bg-whitep-2 tw-my-4  tw-flex tw-flex-row">
+                            
+                            <div class="tw-grid tw-grid-cols-7 tw-gap-2">
+
+
+                            <div type="button" class=" tw-bg-white  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full tw-border-black tw-border-2"> 
+                            </div>
+                            <div type="button" class=" tw-bg-blue-200  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-blue-300  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-blue-500  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-blue-700  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-green-200  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-green-400  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-green-600  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-orange-200  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-orange-400  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-red-200  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-red-400  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-red-600  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-yellow-200  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-yellow-400  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-yellow-600  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            
+                            <div type="button" class=" tw-bg-zinc-200  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-zinc-400  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-zinc-600  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            
+                            <div type="button" class=" tw-bg-indigo-300  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-indigo-400  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-indigo-600  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            
+                            <div type="button" class=" tw-bg-purple-300  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-purple-400  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-purple-600  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            
+                            <div type="button" class=" tw-bg-pink-300  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-pink-400  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+                            <div type="button" class=" tw-bg-pink-600  tw-h-8 tw-w-8  tw-mx-2 tw-rounded-full hover:tw-opacity-60"> 
+                            </div>
+
+                          </div>
+                            
+                          </div>
+
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Apply accent color</span>
+                          <div class="tw-grid tw-grid-cols-2 tw-gap-2">
+                            
+                            <div class="tw-flex tw-flex-row tw-mt-2 tw-mb-1">
+                              <input type="checkbox" class="tw-w-10 ">
+                              <span class="tw-mx-2">
+                                Name
+                              </span>
+                            </div>
+                            <div class="tw-flex tw-flex-row tw-mt-2 tw-mb-1">
+                              <input type="checkbox" class="tw-w-10 ">
+                              <span class="tw-mx-2">
+                                Dots/Bars/Bubbles
+                              </span>
+                            </div>
+                            <div class="tw-flex tw-flex-row tw-mb-1">
+                              <input type="checkbox" class="tw-w-10 ">
+                              <span class="tw-mx-2">
+                                Headings  
+                              </span>
+                            </div>
+                            <div class="tw-flex tw-flex-row tw-mb-1">
+                              <input type="checkbox" class="tw-w-10 ">
+                              <span class="tw-mx-2">
+                                Dates
+                              </span>
+                            </div>
+                            <div class="tw-flex tw-flex-row tw-mb-1">
+                              <input type="checkbox" class="tw-w-10 ">
+                              <span class="tw-mx-2">
+                                Header icons
+                              </span>
+                            </div>
+                            <div class="tw-flex tw-flex-row tw-mb-1">
+                              <input type="checkbox" class="tw-w-10 ">
+                              <span class="tw-mx-2">
+                                Link icons
+                              </span>
+                            </div>
+                            
+                          </div>
+
+
+                        </div>
+                        <!-- colors section end -->
+                      
+
+
+                        <script>
+                          function selected(e)
+                          {
+                            console.log("select button pressed");
+                            console.log(e.className );
+                            bg_color = " tw-bg-blue-800";
+                            console.log(e.className.indexOf(bg_color));
+                            if(e.className.indexOf(bg_color) < 0)
+                            {
+                              e.className += bg_color;
+                              console.log('');
+                              console.log(e.className);
+                            }
+                            /* 
+                            if(e.indexOf("tw-bg-") > 0)
+                            {
+                              n1 = e.indexOf("tw-bg-");
+                              while(e[n1] == " ")
+                              {
+
+                              }
+                              e.className = e.replace("");
+                            } */
+                          }
+                        </script>
+
+                        <!-- font section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="">Font</h2>
+                          
+                          <div class="tw-bg-white p-2  tw-flex tw-flex-row">
+                            
+                            <div class="tw-grid tw-grid-cols-3 tw-gap-2">
+                             
+
+                              <button class="tw-px-4 tw-py-2 tw-mx-2  tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black" onclick=" ">
+                                <h1 class="tw-font-serif tw-w-auto tw-h-auto tw-mx-1 tw-overflow-none">Aa</h1>
+                                Serif
+
+                              </button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2  tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black" onclick="selected(this)">
+                                <h1 class="tw-font-sans tw-w-auto tw-h-auto tw-mx-1 tw-overflow-none">Aa</h1>
+                                Sans
+                              </button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black" onclick="">
+                                <h1 class="tw-font-mono tw-w-auto tw-h-auto tw-mx-1 tw-overflow-none">Aa</h1>
+                                Mono
+                              </button>
+                            </div>
+                           
+                          </div>
+
+                        </div>
+                        <!-- font section end -->
+
+
+                        <!-- heading section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Heading</h2>
+                            
+                          <h5 class="tw-font-bold tw-mt-4">Styles</h5>
+                          <div class="tw-bg-gray-200 p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-4 tw-gap-2">
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                              <div type="button" class=" tw-bg-white  tw-h-6 tw-w-12 tw-rounded-xl tw-mx-2 "> 
+                              </div>
+                            </div>
+                           
+                          </div>
+
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Capitalize</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-2 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Capitalize</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">UpperCase</button>
+                            </div>
+                           
+                          </div>
+
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Size</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-4 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">S</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">M</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">L</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">XL</button>
+                            </div>
+                           
+                          </div>
+
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Icons</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-3 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">None</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Outlined</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Filled</button>
+                            </div>
+                           
+                          </div>
+                        </div>
+                        <!-- heading section end  -->
+
+
+                        <!-- entry layout start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Entry Layout</h2>
+                          
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Size</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-4 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2  tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">S</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">M</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">L</button>
+                              
+                            </div>
+                           
+                          </div>
+
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Sub-title Style</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-3 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Normal</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Bold</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Italic</button>
+                            </div>
+                           
+                          </div>
+
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Sub-title placement</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-3 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black ">Try Same Line</button>
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black ">Next Line</button>
+                            </div>
+                           
+                          </div>
+
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Description Indentation</span>
+                          <div class="tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            <input type="checkbox" class="tw-w-10 ">
+                            <span class="tw-mx-2">
+                              Indent body
+                            </span>
+                          </div>
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm  ">Sub-title placement</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-3 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">
+                                
+                                bullet
+                              </button>
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">- hypen</button>
+                            </div>
+                           
+                          </div>
+
+                          
+
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Icons</span>
+                          <div class=" p-2  tw-flex tw-flex-row">
+                            
+                            <div class="tw-grid tw-grid-cols-3 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">None</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Outlined</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Filled</button>
+                            </div>
+                           
+                          </div>
+                        </div>
+                        <!-- entry section end -->
+
+                        <!-- header section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="">Header</h2>
+                          
+                          <div class="tw-bg-white p-2  tw-flex tw-flex-row">
+                            
+                            
+                            <div type="button" class=" tw-bg-white  tw-h-20 tw-w-20  tw-mx-2 tw-rounded-lg tw-border-black tw-border-2"> 
+                            </div>
+
+                            <div type="button" class=" tw-bg-gray-100  tw-h-20 tw-w-20  tw-mx-2 tw-rounded-lg hover:tw-opacity-60 tw-flex tw-flex-row tw-justify-center tw-items-center"> 
+
+                              <div class=" tw-w-2/3 tw-h-2/3 tw-rounded-t-full tw-text-5xl tw-text-gray-400 ">=</div>
+                              <div class="tw-bg-blue-300 tw-w-1/3 tw-h-1/3 tw-rounded-full"></div>
+                            </div>
+
+                            
+                            <div type="button" class=" tw-bg-gray-100  tw-h-20 tw-w-20  tw-mx-2 tw-rounded-lg hover:tw-opacity-60 tw-flex tw-flex-row tw-justify-center tw-items-center"> 
+                              
+                              <div class="tw-bg-blue-300 tw-w-1/3 tw-h-1/3 tw-rounded-full"></div>
+                              <div class=" tw-w-2/3 tw-h-2/3 tw-rounded-t-full tw-text-5xl tw-text-gray-400 ">=</div>
+                            </div>
+
+                            
+                          </div>
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Details</span>
+                          <div class=" p-2  tw-flex tw-flex-row">
+                            
+                            <div class="tw-grid tw-grid-cols-3 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 tw-text-sm hover:tw-bg-gray-100  hover:tw-border-black">😊 Icon</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 tw-text-sm hover:tw-bg-gray-100  hover:tw-border-black">- Bullet</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 tw-text-sm hover:tw-bg-gray-100  hover:tw-border-black">| Bar</button>
+                            </div>
+                           
+                          </div>
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">change order</span>
+                          <div>
+                            icons list will come here as flex-row from database
+                          </div>
+
+                        </div>
+                        <!-- header section end -->
+
+                        
+
+                        <!-- name section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Name</h2>
+                            
+
+
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Size</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-5 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">XS</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">S</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">M</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">L</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">XL</button>
+                            </div>
+                           
+                          </div>
+
+                          <div class="tw-flex tw-flex-row">
+                            <input type="checkbox" class="tw-w-5 tw-h-5 ">
+                            <span class="tw-mx-2">
+                              Name Bold
+                            </span>
+                          </div>
+                          
+                          <br>
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm  ">Font</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-2 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-w-full tw-mr-2  tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Body Font</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white  tw-w-full tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Creative</button>
+                            </div>
+                           
+                          </div>
+                        </div>
+                        <!-- name section end  -->
+
+
+
+                        <!-- job title section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Job title</h2>
+                            
+
+
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Size</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-5 tw-gap-2">
+                              
+                             <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">S</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">M</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">L</button>
+                             
+                            </div>
+                           
+                          </div>
+
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm  ">Position</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-2 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-w-full tw-mr-2  tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">By Same Line</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white  tw-w-full tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">
+                                Below
+                              </button>
+                            </div>
+                           
+                          </div>
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm  ">Style</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-2 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-w-full tw-mr-2  tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Normal</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white  tw-w-full tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">
+                                <i>Italic</i>
+                              </button>
+                            </div>
+                           
+                          </div>
+                        </div>
+                        <!-- job title section end  -->
+
+
+                        <!-- Footer section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="">Footer</h2>
+                          
+
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Apply accent color</span>
+                          <div class="tw-grid tw-grid-cols-1 tw-gap-2">
+                            
+                            <div class="tw-flex tw-flex-row tw-mt-2 tw-mb-1">
+                              <input type="checkbox" class="tw-w-10 ">
+                              <span class="tw-mx-2">
+                                Page No.
+                              </span>
+                            </div>
+                            <div class="tw-flex tw-flex-row  tw-mb-1">
+                              <input type="checkbox" class="tw-w-10 ">
+                              <span class="tw-mx-2">
+                                Email
+                              </span>
+                            </div>
+                            <div class="tw-flex tw-flex-row tw-mb-1">
+                              <input type="checkbox" class="tw-w-10 ">
+                              <span class="tw-mx-2">
+                                Name  
+                              </span>
+                            </div>
+                            
+                          </div>
+
+
+                        </div>
+                        <!-- Footer section end -->
+
+
+                        <!-- photo section start -->
+
+                        <!-- photo section end  -->
+                        
+                        
+                        
+                        <!-- date section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Date</h2>
+                            
+
+
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Format</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-3 tw-gap-2">
+                              
+                              <button class="tw-px-1 tw-py-2 tw-ml-2 tw-bg-white tw-text-xs tw-overflow-hidden tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">DD/MM/YYYY</button>
+                              <button class="tw-px-1 tw-py-2 tw-ml-2 tw-bg-white tw-text-xs tw-overflow-hidden tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">MM/DD/YYYY</button>
+                              <button class="tw-px-1 tw-py-2 tw-ml-2 tw-bg-white tw-text-xs tw-overflow-hidden tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">YYYY/MM/DD</button>
+                            </div>
+                           
+                          </div>
+
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm  ">Font</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-2 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white tw-w-full tw-mr-2  tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Body Font</button>
+                              <button class="tw-px-4 tw-py-2 tw-mx-2 tw-bg-white  tw-w-full tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Creative</button>
+                            </div>
+                           
+                          </div>
+                        </div>
+                        <!-- date section end  -->
+
+                        
+                        <!-- regional section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Regional</h2>
+                            
+
+
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Format</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-2 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">A4</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">US Letter</button>
+                            </div>
+                            
+                          </div>
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Anonymous</span>
+                          <div class="tw-flex tw-flex-row tw-mt-1">
+                            <input type="checkbox" class="tw-w-5 tw-h-5 ">
+                            <span class="tw-mx-2">
+                              Hide all personal details
+                            </span>
+                          </div>
+                          
+                          
+                        </div>
+                        <!-- regional section end  -->
+
+
+                        
+
+                        <!-- advanced section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Advanced</h2>
+                            
+
+
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Link icon</span>
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-3 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">none</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                              </button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">
+                                <i class="fa-solid fa-link"></i>
+                              </button>
+                            </div>
+                            
+                          </div>
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Data & Location opacity</span>
+                          <div class="tw-flex tw-flex-row tw-mt-2">
+                            <input type="checkbox" class="tw-w-5 tw-h-5 ">
+                            <span class="tw-mx-2">
+                              Less opacity
+                            </span>
+                          </div>
+                          
+                          
+                        </div>
+                        <!-- advanced section end  -->
+
+                        
+                        
+                        <!-- skills section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Skills</h2>
+                          
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1">
+                            
+                            <div class="tw-grid tw-grid-cols-4 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Grid</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Level</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">
+                                Text
+                              </button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 tw-text-sm hover:tw-bg-gray-100  hover:tw-border-black">
+                                Bubble
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-4 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Dots</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Bars</button>
+                            </div>
+                          </div>
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Subinfo font style</span>
+                          <div class="tw-flex tw-flex-row tw-mt-2">
+                            <input type="checkbox" class="tw-w-5 tw-h-5 ">
+                            <span class="tw-mx-2">
+                              <i>italic</i>
+                            </span>
+                          </div>
+                          
+                          
+                        </div>
+                        <!-- skills section end  -->
+
+                        
+                        
+                        <!-- languages section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Languages</h2>
+                          
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1">
+                            
+                            <div class="tw-grid tw-grid-cols-4 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Grid</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Level</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">
+                                Text
+                              </button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 tw-text-sm hover:tw-bg-gray-100  hover:tw-border-black">
+                                Bubble
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-4 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Dots</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Bars</button>
+                            </div>
+                          </div>
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Subinfo font style</span>
+                          <div class="tw-flex tw-flex-row tw-mt-2">
+                            <input type="checkbox" class="tw-w-5 tw-h-5 ">
+                            <span class="tw-mx-2">
+                              <i>italic</i>
+                            </span>
+                          </div>
+                          
+                          
+                        </div>
+                        <!-- languages section end  -->
+
+
+                         <!-- Interests section start -->
+                         <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Interest</h2>
+                          
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1">
+                            
+                            <div class="tw-grid tw-grid-cols-3 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Grid</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Text</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 tw-text-sm hover:tw-bg-gray-100  hover:tw-border-black">
+                                Bubble
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-3 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Bullet</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Pipe</button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">Wrap</button>
+                            </div>
+                          </div>
+                          
+                          <span class="tw-font-bold tw-mt-10 tw-font-sm ">Subinfo font style</span>
+                          <div class="tw-flex tw-flex-row tw-mt-2">
+                            <input type="checkbox" class="tw-w-5 tw-h-5 ">
+                            <span class="tw-mx-2">
+                              <i>italic</i>
+                            </span>
+                          </div>
+                          
+                          
+                        </div>
+                        <!-- Interests section end  -->
+
+
+
+                        
+                        <!-- Profile section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Profile</h2>
+                          
+
+                          <div class="tw-flex tw-flex-row tw-mt-2">
+                            <input type="checkbox" class="tw-w-5 tw-h-5 ">
+                            <span class="tw-mx-2">
+                              Show file section heading
+                            </span>
+                          </div>
+                          
+                          
+                        </div>
+                        <!-- profile section end  -->
+
+
+
+                        <!-- education section start -->
+                        <div class="tw-bg-white p-4 tw-my-4 tw-rounded-lg">
+                          <h2 class="tw-font-bold tw-my-2">Education</h2>
+                          
+
+                          <div class=" p-2  tw-flex tw-flex-row tw-mt-1 tw-mb-4">
+                            
+                            <div class="tw-grid tw-grid-cols-2 tw-gap-2">
+                              
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">
+                                Degree - School
+                              </button>
+                              <button class="tw-px-4 tw-py-2 tw-ml-2 tw-bg-white tw-rounded-lg tw-border-2 tw-border-blue-600 hover:tw-bg-gray-100  hover:tw-border-black">
+                                School - Degree
+                              </button>
+                            </div>
+                          </div>
+                          
+                          
+                          
+                        </div>
+                        <!-- education section end  -->
+  
+  
+
+
+
+
+                    <button
+                      class="btn btn-info tw-mb-10 tw-mt-6 text-white tw-p-2"
+                      onclick=""
+                    >
+                      <h1 class="fw-bold">Save</h1>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          @media (max-width: 1052px) {
+            .resume {
+              padding-top: 20px;
+              min-height: 600px;
+              max-height: 600px;
+              max-width: auto;
+              padding: 40px;
+              margin-right: 10px;
+              overflow-x: hidden;
+              display: inline-block;
+              /* overflow-x: auto; */
+            }
+          }
+          @media (max-width: 1000px) {
+            .resume {
+              /* 
+padding-top: 20px;
+min-height: 500px;
+max-height: 500px;
+max-width: 500px;
+padding: 40px;
+margin-right: 10px;
+overflow-x: hidden */
+              display: none;
+            }
+
+            .leftsidebar {
+              /* 
+padding-top: 20px;
+min-height: 500px;
+max-height: 500px;
+max-width: 500px;
+padding: 40px;
+margin-right: 10px;
+overflow-x: hidden */
+              display: none;
+            }
+          }
+
+          @media (max-width: 700px) {
+            .resume {
+              /* padding-top: 20px;
+
+min-height: 200px;
+max-height: 200px;
+max-width: 400px;
+padding: 40px;
+margin-right: 10px;
+overflow-x: hidden; */
+              display: none;
+            }
+          }
+
+          @media (min-width: 1052px) {
+            .autowidth {
+              width: auto;
+            }
+            .resume {
+              padding-top: 20px;
+              min-height: 600px;
+              max-height: 600px;
+              /* max-width: auto; */
+              width: auto;
+              padding: 40px;
+              margin-right: 100px;
+              overflow-x: hidden;
+              display: inline-block;
+            }
+          }
+        </style>
+
+        <!-- Right Section -->
+        <div class="col-md-2 col-sm-1 col-xl-3">
+          <div class="bg-info tw-rounded-lg">
+            <div class="tw-relative">
+              <div
+                class="col-md-5 col-sm-2 bg-light tw-ml-4 h-full resume tw-fixed tw-top-10 tw-rounded-lg hideScroll"
+              >
+                <div class="tw-overflow-y-auto">
+                  <div class="container">
+                    <!-- template 3 start -->
+                    <div class="container tw-bg-gradient-to-b tw-from-pink-500 tw-via-red-500 tw-to-yellow-500 tw-p-4" id="template3" style="display:none;">
+                      <div
+                        class=" tw-bg-white"
+                      >
+                        <div
+                          class="row tw-my-10 tw-px-12 "
+                          id="resume_personal_details3"
+                        ></div>
+                        <div
+                          class="row tw-my-10 tw-px-12"
+                          id="resume_skills3  "
+                        ></div>
+                        <div
+                          class="row  tw-my-10 tw-px-12"
+                          id="resume_education3"
+                        ></div>
+                        <div
+                          class="row  tw-my-10 tw-px-12"
+                          id="resume_projects3"
+                        ></div>
+                        <div
+                          class="row  tw-my-10 tw-px-12"
+                          id="resume_languages3"
+                        ></div>
+                        <div
+                          class="row  tw-my-10 tw-px-12"
+                          id="resume_awards3"
+                        ></div>
+                        <div
+                          class="row  tw-my-10 tw-px-12"
+                          id="resume_courses3"
+                        ></div>
+                        <div
+                          class="row  tw-my-10 tw-px-12"
+                          id="resume_publications3"
+                        ></div>
+                        <div
+                          class="row e tw-my-10 tw-px-12"
+                          id="resume_profile3"
+                        ></div>
+                        <div
+                          class="row  tw-my-10 tw-px-12"
+                          id="resume_references3"
+                        ></div>
+                        <div
+                          class="row tw-mt-10 tw-pb-10 tw-px-12"
+                          id="resume_organization3"
+                        ></div>
+                      </div>
+                    </div>
+                    <!-- template3 end -->
+
+                    <!-- template 2 start -->
+                    <div class="row" id="template2" style="display: none">
+                      <div class="col-md-8 bg-tw-white pl-3 my-2">
+                        <div
+                          class="row tw-bg-yellow-100 tw-my-10"
+                          id="resume_education2"
+                        >
+                          <!-- resume education -->
+                        </div>
+                        <div
+                          class="row tw-bg-blue-100 tw-my-10"
+                          id="resume_organization2"
+                        >
+                          <!-- organization -->
+                        </div>
+                        <div
+                          class="row tw-bg-yellow-100 tw-my-10"
+                          id="resume_projects2"
+                        >
+                          <!-- projects -->
+                        </div>
+                        <div
+                          class="row tw-bg-blue-100 tw-my-10"
+                          id="resume_references2"
+                        >
+                          <!-- references -->
+                        </div>
+                        <div
+                          class="row tw-bg-yellow-100 tw-my-10"
+                          id="resume_awards2"
+                        >
+                          <!-- awards -->
+                        </div>
+                        <div
+                          class="row tw-bg-blue-100 tw-my-10"
+                          id="resume_courses2"
+                        >
+                          <!-- courses -->
+                        </div>
+                      </div>
+                      <div class="col-md-4 tw-bg-orange-400 px-6 py-3 px-3">
+                        <div
+                          class="row tw-bg-white tw-my-10"
+                          id="resume_personal_details2"
+                        >
+                          <!-- personal details -->
+                        </div>
+                        <div class="row tw-bg-white" id="resume_skills1">
+                          <!-- resume skills -->
+                        </div>
+                        <div
+                          class="row tw-bg-white tw-my-10"
+                          id="resume_profile2"
+                        >
+                          <!-- profile -->
+                        </div>
+                        <div
+                          class="row tw-bg-white tw-my-10"
+                          id="resume_languages2"
+                        >
+                          <!-- languages -->
+                        </div>
+                        <div
+                          class="row tw-bg-white tw-my-10"
+                          id="resume_publications2"
+                        >
+                          <!-- publications -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- template 2 end -->
+
+                    <!-- template 1 start -->
+                    <div class="row" id="template1" style="display: none">
+                      <div class="col-md-4 bg-info px-6 py-3 px-3 left">
+                        <div
+                          class="row tw-bg-blue-100 tw-my-10"
+                          id="resume_personal_details1"
+                        >
+                          <!-- personal details -->
+                        </div>
+                        <div class="row tw-bg-blue-100 tw-my-10" id="resume_skills1">
+                          <!-- resume skills -->
+                        </div>
+                        <div
+                          class="row tw-bg-blue-100 tw-my-10"
+                          id="resume_profile1"
+                        >
+                          <!-- profile -->
+                        </div>
+                        <div
+                          class="row tw-bg-blue-100 tw-my-10"
+                          id="resume_languages1"
+                        >
+                          <!-- languages -->
+                        </div>
+                        <div
+                          class="row tw-bg-blue-100 tw-my-10"
+                          id="resume_publications1"
+                        >
+                          <!-- publications -->
+                        </div>
+                      </div>
+                      <div class="col-md-8 bg-tw-white pl-3 my-2">
+                        <div
+                          class="row tw-bg-blue-100 tw-my-10"
+                          id="resume_education1"
+                        >
+                          <!-- resume education -->
+                        </div>
+                        <div
+                          class="row tw-bg-blue-300 tw-my-10"
+                          id="resume_organization1"
+                        >
+                          <!-- organization -->
+                        </div>
+                        <div
+                          class="row tw-bg-orange-500 tw-my-10"
+                          id="resume_projects1"
+                        >
+                          <!-- projects -->
+                        </div>
+                        <div
+                          class="row tw-bg-blue-100 tw-my-10"
+                          id="resume_references1"
+                        >
+                          <!-- references -->
+                        </div>
+                        <div
+                          class="row tw-bg-blue-100 tw-my-10"
+                          id="resume_awards1"
+                        >
+                          <!-- awards -->
+                        </div>
+                        <div
+                          class="row tw-bg-blue-100 tw-my-10"
+                          id="resume_courses1"
+                        >
+                          <!-- courses -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- template 1 end -->
+
+                    <!-- template 0 start -->
+                    <div class="container" id="template0">
+                      <div
+                        class="row tw-bg-blue-100 tw-my-10 "
+                        id="resume_personal_details0"
+                      ></div>
+                      <div class="row tw-bg-blue-100" id="resume_skills0"></div>
+                      <div
+                        class="row tw-bg-blue-100 tw-my-10"
+                        id="resume_education0"
+                      ></div>
+                      <div
+                        class="row tw-bg-blue-100 tw-my-10"
+                        id="resume_projects0"
+                      ></div>
+                      <div
+                        class="row tw-bg-blue-100 tw-my-10"
+                        id="resume_languages0"
+                      ></div>
+                      <div
+                        class="row tw-bg-blue-100 tw-my-10"
+                        id="resume_awards0"
+                      ></div>
+                      <div
+                        class="row tw-bg-blue-100 tw-my-10"
+                        id="resume_courses0"
+                      ></div>
+                      <div
+                        class="row tw-bg-blue-100 tw-my-10"
+                        id="resume_publications0"
+                      ></div>
+                      <div
+                        class="row tw-bg-blue-100 tw-my-10"
+                        id="resume_profile0"
+                      ></div>
+                      <div
+                        class="row tw-bg-blue-100 tw-my-10"
+                        id="resume_references0"
+                      ></div>
+                      <div
+                        class="row tw-bg-blue-300"
+                        id="resume_organization0"
+                      ></div>
+                    </div>
+                    <!-- template0 end -->
+                  </div>
+
+                  <label for="textArea" class=""> You have Entered : </label>
+
+                  <span id="_name" class="mr-2"></span>
+                  <span name="" id="name1" class="mr-2"></span>
+
+                  <br /><br />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illum natus dicta minus illo earum commodi tempore vero
+                    corrupti eaque veritatis ab non aliquid, ipsum, amet
+                    expedita, quam quo! Omnis iusto quasi eveniet dolorem magni
+                    consequatur optio voluptates, expedita quis quidem.
+                    Explicabo corporis culpa exercitationem ratione, minima
+                    quaerat temporibus, ducimus veniam dolore nisi voluptates?
+                    Dolor nostrum vitae totam nihil! Dicta asperiores, fugiat
+                    impedit tempora magnam consequatur eligendi distinctio,
+                    cupiditate vel aspernatur voluptatum, nulla nostrum natus
+                    quae? Et vitae quod quidem quo totam natus, impedit odit
+                    exercitationem pariatur adipisci tenetur ducimus est modi
+                    sit eius mollitia corporis accusamus numquam odio enim omnis
+                    iste! Excepturi non officiis quod asperiores deleniti nobis
+                    ducimus vel! Eos incidunt laboriosam quos hic minus quo
+                    ipsum impedit. Labore architecto, non nulla, magni impedit
+                    ex reiciendis explicabo earum accusamus saepe cum tenetur
+                    neque perspiciatis obcaecati qui vitae voluptatibus et
+                    dignissimos. Aliquid numquam eligendi soluta perferendis
+                    explicabo deleniti ducimus consectetur cupiditate quidem
+                    esse unde ratione possimus, distinctio corrupti atque nemo
+                    ex reiciendis accusamus, optio consequuntur voluptate
+                    accusantium. Impedit, minus ipsum aspernatur odio facilis,
+                    quis, id error excepturi magnam vitae aliquid nam pariatur
+                    rem veritatis ipsam fugit quas temporibus quo. Cum sunt,
+                    debitis ipsam maiores illo expedita repudiandae obcaecati
+                    nulla doloremque ipsa nemo dolore eaque dolorum? Asperiores
+                    necessitatibus dolorem iste distinctio, maxime laboriosam
+                    obcaecati et eveniet quod velit ea reiciendis. Aliquam illum
+                    ducimus sapiente aperiam delectus vero et atque placeat,
+                    deserunt, maxime praesentium ipsum soluta nobis velit.
+                    Dolorem quos deserunt numquam expedita omnis nihil quidem,
+                    consectetur nisi aliquam ab ratione libero tempora minima
+                    natus totam rem fuga corporis? Vitae ipsam aliquid amet
+                    nulla quis veritatis in deserunt placeat consectetur est
+                    voluptates libero culpa consequuntur vero obcaecati, quo
+                    ducimus, eaque unde quod repellendus error velit? Itaque,
+                    ab. Aspernatur distinctio consequatur perferendis
+                    consectetur doloremque nisi, laboriosam facilis ratione
+                    maxime consequuntur ipsum ipsam impedit ea fugiat modi neque
+                    odio cupiditate tempore porro alias iure repellendus ex
+                    beatae. Voluptatum sequi aut id quam deleniti voluptates
+                    libero, fugit nemo animi aperiam, sint facere modi ducimus,
+                    quidem vel perferendis nam? Alias laborum sequi consectetur
+                    officiis animi nisi eligendi, iste maiores asperiores optio
+                    reprehenderit totam qui, quis natus similique vel
+                    repudiandae explicabo. Rerum, deserunt! Deserunt sunt iste
+                    perspiciatis similique facere voluptate nobis dicta, aliquid
+                    ducimus ipsum dolorem voluptas repellendus nostrum optio
+                    excepturi quo sapiente harum. Voluptatem dolores quod illum
+                    nesciunt numquam optio itaque commodi aspernatur, adipisci,
+                    impedit ratione fuga cumque sequi necessitatibus, soluta
+                    quasi eius maxime id ex vero minima mollitia odit? Quidem
+                    quisquam, molestiae officiis vel quos et velit
+                    necessitatibus, enim magni deserunt eum perferendis illo
+                    ducimus vero. Veniam incidunt facilis, perferendis esse
+                    quaerat voluptate illum, ipsum nemo quis dolor rem a placeat
+                    atque ab inventore sint non error dicta ea explicabo.
+                    Repellendus ab esse libero eius perferendis architecto,
+                    quidem amet maiores nam, tempora ad. Praesentium, corporis
+                    quo dicta nobis eos ex eum dolorum est sequi hic ea
+                    explicabo accusantium consectetur saepe placeat officiis
+                    laudantium iste necessitatibus provident, illum tenetur
+                    repellat magnam. Saepe amet labore vel provident aliquid!
+                    Dolores tenetur doloribus distinctio quas perferendis ad
+                    alias, nulla harum, architecto totam fuga optio laboriosam
+                    maxime. Fugiat distinctio voluptatum neque, iusto
+                    voluptates, deleniti assumenda ipsum nobis tenetur saepe
+                    aspernatur nemo aperiam cumque ducimus eum. Eius laudantium
+                    neque soluta nam, in corrupti fugiat id vel temporibus est
+                    nisi a asperiores atque itaque nesciunt distinctio
+                    consequatur omnis fugit alias sunt quidem? Sint voluptatibus
+                    sunt saepe nihil fuga enim eos nostrum, perferendis pariatur
+                    earum maiores, sequi similique labore odio reprehenderit
+                    voluptate hic totam, itaque ducimus cum deserunt harum velit
+                    debitis amet. Debitis qui vitae quas ea odit vero corrupti
+                    nihil dolores aliquam. Et, dicta repellat at unde neque
+                    ratione vel sapiente? Tempora suscipit adipisci, repellendus
+                    molestias culpa dolorum exercitationem sapiente mollitia.
+                    Perferendis maiores facilis temporibus doloribus nam? Sint
+                    officiis rerum atque numquam inventore quae tempore eaque
+                    enim veniam molestias? Suscipit totam labore corporis autem,
+                    cupiditate, sint molestias non reprehenderit sequi dolorem
+                    facere eius fugit molestiae consequuntur, et unde
+                    perferendis dolor libero voluptatibus magni voluptates optio
+                    quod sed. Recusandae, excepturi deleniti odio veritatis
+                    delectus earum nesciunt soluta? Corporis dolore ex odit
+                    pariatur ea laudantium, officia nulla veniam natus in
+                    molestias, laborum explicabo et iusto unde! Saepe, est
+                    perspiciatis eum accusamus corrupti sequi asperiores ex quis
+                    unde similique natus in explicabo quas sit possimus
+                    perferendis dicta quisquam! Quam nemo rerum hic sunt
+                    quisquam, culpa error, aperiam distinctio ad molestias minus
+                    dolores voluptate nostrum iusto totam obcaecati eos
+                    voluptates. Alias cupiditate aliquam ipsum ab rem est
+                    quaerat debitis voluptas minus sint facere doloremque neque
+                    autem commodi, tenetur explicabo optio eum ratione iure
+                    ipsam inventore ea placeat, sit nobis. Sapiente, adipisci
+                    culpa! Soluta repellat commodi reprehenderit, molestias
+                    praesentium quas. Corrupti incidunt dolor delectus
+                    reprehenderit cum, numquam id nesciunt consequatur mollitia
+                    deleniti earum aspernatur enim maxime consequuntur nulla
+                    voluptatum animi impedit! Consequatur ad reiciendis commodi
+                    non cumque in, reprehenderit ea, facere tenetur voluptate
+                    aspernatur nihil ullam ipsum fuga. Ut architecto expedita
+                    voluptatibus repellat, nobis porro. Et labore molestias, eum
+                    quia unde sed, laborum quaerat dolorem, corrupti quasi
+                    debitis quisquam odio voluptatem ut sunt perspiciatis illo
+                    at ex. Quod, laudantium tenetur. Odio perferendis aut rem
+                    error, unde incidunt voluptas doloribus ab quis expedita
+                    tenetur, a, nemo laboriosam maiores ea? Consequuntur
+                    corrupti architecto accusamus doloremque eum asperiores
+                    exercitationem facilis non cupiditate voluptas numquam,
+                    quasi veritatis libero voluptatum laboriosam iure
+                    repudiandae quae debitis recusandae unde quos beatae vero?
+                    Perspiciatis quo repudiandae nulla fugiat veniam, libero a
+                    officia praesentium similique illum? Amet adipisci culpa
+                    animi nesciunt corporis nisi veniam sunt saepe quas facere
+                    voluptatum quasi unde sequi, odio harum eveniet quidem porro
+                    vero praesentium molestias nemo! Pariatur delectus obcaecati
+                    consequuntur dolore. Porro mollitia at voluptates eius
+                    dolore eum molestiae similique ea, in error, quibusdam et
+                    ullam. Tempora facilis, assumenda, accusantium recusandae ex
+                    cupiditate nemo nesciunt eius voluptates distinctio at odio
+                    iusto corporis commodi fugiat, aut non! Nulla, nobis
+                    quisquam. Obcaecati impedit quod, quibusdam veritatis ut
+                    amet quaerat dolor iure aspernatur debitis praesentium ab
+                    dignissimos nulla nobis voluptatem repellat adipisci quos
+                    tempore enim libero incidunt, magnam cupiditate. Officia
+                    totam, consequatur neque asperiores, eum dicta voluptate
+                    cumque in magni deserunt tempora voluptatem. Debitis.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    
+
+    <script>
+        $(document).ready(function(){
+            //alert("Please");
+            $("#left_nav").load("left_nav.html");
+            console.log(document.getElementById("#left_nav"));
+        });
+        
+    </script>
+
+    <script>
+      $(document).ready(function (add_btn) {
+        
+        function remove_field(item_id) {
+          $("#item").hide();
+        }
+
+        function add_more_fields() {
+          return `
+                        <label for="dob" class="text-dark tw-mt-2 tw-mb-1 fw-bold">Date of Birth</label> <span class="text-gray-400 text-xs tw-ml-1">optional</span> <br>
+                        <input type="text" id="dob" name="personal_details[]" oninput="updateSpan(this)" class="tw-bg-gray-200 tw-rounded-lg tw-py-2 tw-pl-4 tw-w-full tw-pl-4" placeholder="Enter Job Title">
+                        
+                        <br>
+                    `;
+        }
+
+        $("#btn_add_dob").on("click", function () {
+          console.log("button pressed");
+          $("#add_dob").append(add_more_fields(this));
+          remove_field("add_dob");
+        });
+      });
+    </script>
+
+    <script src="render.js"></script>
+
+    <script>
+      var temp_id = getVariable();
+      console.log("resume.html, temp id is : " + temp_id);
+      $(document).ready(function () {
+        console.log("function called");
+        $("#template0").show();
+        $("#template1").hide();
+        $("#template2").hide();
+        $("#template3").hide();
+
+        if (temp_id == 0) {
+          $("#template0").show();
+          console.log("template 0 is shown");
+          console.log("template 1 is hide");
+        } else if (temp_id == 1) {
+          console.log("2222resume.html, temp id is : " + temp_id);
+          $("#template0").hide();
+          $("#template1").show();
+          $("#template2").hide();
+          $("#template3").hide();
+        } else if (temp_id == 2) {
+          $("#template0").hide();
+          $("#template1").hide();
+          $("#template2").show();
+          $("#template3").hide();
+        } else if (temp_id == 3) {
+          $("#template0").hide();
+          $("#template1").hide();
+          $("#template2").hide();
+          $("#template3").show();
+        }
+      });
+    </script>
+  </body>
+</html>
